@@ -266,12 +266,14 @@
       }
     },
     {
-      "apiVersion": "[variables('apiVersion')]",
+      "apiVersion": "2016-03-30",
       "type": "Microsoft.Network/networkInterfaces",
       "name": "[variables('nicNameHN')]",
       "location": "[resourceGroup().location]",
       "dependsOn": [
-        "Microsoft.Resources/deployments/setupClusterPublicIP"
+        "[resourceId('Microsoft.Network/publicIPAddresses', parameters('publicIPName'))]",
+	"[resourceId('Microsoft.Network/virtualNetworks', variables('vnetID'))]"
+
       ],
       "properties": {
         "ipConfigurations": [
