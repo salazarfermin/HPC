@@ -271,7 +271,7 @@
       "name": "[variables('nicNameHN')]",
       "location": "[resourceGroup().location]",
       "dependsOn": [
-        "[resourceId('Microsoft.Network/publicIPAddresses', parameters('publicIPName'))]",
+        "[resourceId('Microsoft.Network/publicIPAddresses', 'setupClusterPublicIP')]",
 	"[resourceId('Microsoft.Network/virtualNetworks',parameters('virtualNetworkName'))]"
 
       ],
