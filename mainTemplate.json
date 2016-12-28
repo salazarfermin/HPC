@@ -182,7 +182,7 @@
     "storageAccountIndexWidth": "[length(string(sub(add(variables('cnStorageAccountNumber'), variables('cnStorageAccountStartIndex')), 1)))]",
     "hnStorageAccountName": "[concat(parameters('storageAccountNamePrefix'), padLeft(string(parameters('storageAccountStartIndex')), variables('storageAccountIndexWidth'), '0'))]",
     "hnStorageAccountId": "[resourceId('Microsoft.Storage/storageAccounts',variables('hnStorageAccountName'))]",
-    "vnetID": "[concat('/subscriptions/',subscription().Id,'/resourceGroups/',resourceGroup().id,'/providers/Microsoft.Network/virtualNetworks/',parameters('virtualNetworkName'))]",
+    "vnetID": "[resourceId('Microsoft.Network/virtualNetworks',parameters('virtualNetworkName'))]",
 	"addressPrefix": "172.30.1.0/24",
 	"subnet1Name": "PMX-172.30.1.0",
 	"subnet1Prefix": "172.30.1.0/25",
@@ -272,7 +272,7 @@
       "location": "[resourceGroup().location]",
       "dependsOn": [
         "[resourceId('Microsoft.Network/publicIPAddresses', parameters('publicIPName'))]",
-	"[variables('vnetID')]"
+	"[resourceId('Microsoft.Network/virtualNetworks',parameters('virtualNetworkName'))]"
 
       ],
       "properties": {
