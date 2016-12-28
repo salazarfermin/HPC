@@ -272,8 +272,7 @@
       "location": "[resourceGroup().location]",
       "dependsOn": [
         "Microsoft.Resources/deployments/setupClusterPublicIP",
-	"[resourceId('Microsoft.Network/virtualNetworks',parameters('virtualNetworkName'))]"
-
+	"Microsoft.Resources/deployments/[parameters('virtualNetworkName')]"
       ],
       "properties": {
         "ipConfigurations": [
