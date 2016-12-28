@@ -272,24 +272,7 @@
       "location": "[resourceGroup().location]",
       "dependsOn": [
         "Microsoft.Resources/deployments/setupClusterPublicIP"
-      ],
-      "properties": {
-        "ipConfigurations": [
-          {
-            "name": "IPConfig",
-            "properties": {
-              "privateIPAllocationMethod": "Static",
-              "privateIPAddress": "172.30.1.8",
-              "publicIPAddress": {
-                "id": "[reference('setupClusterPublicIP').outputs.resourceId.value]"
-              },
-              "subnet": {
-                "id": "[variables('subnetRef')]"
-              }
-            }
-          }
-        ]
-      }
+      ]
     }
   ],
   "outputs": {
