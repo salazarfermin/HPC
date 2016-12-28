@@ -282,6 +282,9 @@
               "privateIPAddress": "172.30.1.8",
               "publicIPAddress": {
                 "id": "[reference('setupClusterPublicIP').outputs.resourceId.value]"
+              },
+              "subnet": {
+                "id": "[variables('subnetRef')]"
               }
             }
           }
