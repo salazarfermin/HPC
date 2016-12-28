@@ -272,7 +272,7 @@
       "location": "[resourceGroup().location]",
       "dependsOn": [
         "[resourceId('Microsoft.Network/publicIPAddresses', parameters('publicIPName'))]",
-	"[resourceId('Microsoft.Network/virtualNetworks', variables('vnetID'))]"
+	"[variables('vnetID')]"
 
       ],
       "properties": {
