@@ -333,7 +333,7 @@ else
                  TraceInfo 'HPCScheduler service restarted.'
 
                  # If the VMSize of the compute nodes is A8/A9, set the MPI net mask.
-                 if($CNSize -match "(A8|A9)$")
+                 if($CNSize -match "(A8|A9|H16r)$")
                  {
                      $mpiNetMask = "172.16.0.0/255.255.0.0"
                      ## Wait for the completion of the "Updating cluster configuration" operation after setting network topology,
