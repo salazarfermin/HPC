@@ -201,8 +201,8 @@
     "suffixH16rSize": "[concat('Standard_H16r', variables('vmSizeSuffix'))]",
     "suffixHNSize": "[concat(parameters('headNodeVMSize'), variables('vmSizeSuffix'))]",
     "suffixCNSize": "[concat(parameters('computeNodeVMSize'), variables('vmSizeSuffix'))]",
-    "cnRDMACapable": "[replace(replace(replace(variables('suffixCNSize'), variables('suffixA8Size'),'enabled'), variables('suffixA9Size'),'enabled'),variables('suffixCNSize'), 'disabled')]",
-    "hnRDMACapable": "[replace(replace(replace(variables('suffixHNSize'), variables('suffixA8Size'),'enabled'), variables('suffixA9Size'),'enabled'),variables('suffixHNSize'), 'disabled')]",
+    "cnRDMACapable": "[replace(replace(replace(variables('suffixCNSize'), variables('suffixH16rSize'),'enabled'), variables('suffixA9Size'),'enabled'),variables('suffixCNSize'), 'disabled')]",
+    "hnRDMACapable": "[replace(replace(replace(variables('suffixHNSize'), variables('suffixH16rSize'),'enabled'), variables('suffixA9Size'),'enabled'),variables('suffixHNSize'), 'disabled')]",
     "hnRDMAJumpBox": {
       "disabled-disabled": "disabled",
       "disabled-enabled": "disabled",
