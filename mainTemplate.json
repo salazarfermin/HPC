@@ -182,7 +182,7 @@
     "storageAccountIndexWidth": "[length(string(sub(add(variables('cnStorageAccountNumber'), variables('cnStorageAccountStartIndex')), 1)))]",
     "hnStorageAccountName": "[concat(parameters('storageAccountNamePrefix'), padLeft(string(parameters('storageAccountStartIndex')), variables('storageAccountIndexWidth'), '0'))]",
     "hnStorageAccountId": "[resourceId('Microsoft.Storage/storageAccounts',variables('hnStorageAccountName'))]",
-    "vnetID": "/subscriptions/01ea5c88-fa9c-4e3b-abce-ff438f8c74c8/resourceGroups/DCPNTI-GSPI/providers/Microsoft.Network/virtualNetworks/Pemex_VNet2",
+    "vnetID": "/subscriptions/01ea5c88-fa9c-4e3b-abce-ff438f8c74c8/resourceGroups/DCPNTI-GSPI-HPC/providers/Microsoft.Network/virtualNetworks/Pemex_VNet2",
 	"addressPrefix": "172.30.1.0/24",
 	"subnet1Name": "PMX-172.30.1.0",
 	"subnet1Prefix": "172.30.1.0/25",
