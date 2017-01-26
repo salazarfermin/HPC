@@ -20,7 +20,7 @@
     },
     "headNodeVMSize": {
       "type": "string",
-      "defaultValue": "Standard_A9",
+      "defaultValue": "Standard_A3",
       "allowedValues": [
         "Standard_A3",
         "Standard_A4",
@@ -107,7 +107,7 @@
     },
     "computeNodeVMSize": {
       "type": "string",
-      "defaultValue": "Standard_A9",
+      "defaultValue": "Standard_A2",
       "allowedValues": [
         "Standard_A2",
         "Standard_A3",
